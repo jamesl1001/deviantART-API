@@ -14,7 +14,7 @@
 
 	<?php
 	    include 'getDeviations.php';
-	    $html = getDeviations('http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123361', 8);
+	    $html = getDeviations('http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123361');
 	    echo $html;
 	?>
 </body>
