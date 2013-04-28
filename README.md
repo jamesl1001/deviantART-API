@@ -32,7 +32,7 @@ What data does the feed provide?
 - deviant's name
 - deviant's avatar
 - copyright
-- description (with and without markup)
+- description
 - thumbnail (w: 150)
 - thumbnail (w: 300)
 - deviation
