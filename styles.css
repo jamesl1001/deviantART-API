@@ -1,0 +1,53 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  margin: 10px;
+}
+
+h2, p {
+  margin-top: 0;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  background: #CCC;
+  border: 0;
+  margin: 20px 0 40px;
+  float: left;
+}
+
+.deviation {
+  width: 100%;
+  background: #EEE;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px #CCC;
+  float: left;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.col {
+  width: 49%;
+  float: left;
+}
+
+.col-p {
+  margin-right: 1%;
+}
+
+.col-s {
+  margin-left: 1%;
+}
+
+.deviation_image {
+  width: 100%;
+  box-shadow: 1px 1px 3px #999;
+  margin-bottom: 10px;
+}

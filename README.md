@@ -1,12 +1,14 @@
 Deviant-Art-CMS
 ===============
-How to utilise DeviantArt's feeds as a CMS
+Use DeviantArt's RSS/XML feeds as a CMS to dynamically embed deviation galleries on your website.
+
+DeviantArt users can create Gallery Folders to organise their deviations (e.g. http://fu51on.deviantart.com/gallery/)
+
+This script returns the [data](#what-data-does-the-feed-provide) from all the deviations from the specified folder.
 
 Demo: http://jalproductions.co.uk/projects/DeviantArtCMS/
 
-DeviantArt allows us to create Gallery Folders to organise our deviations: http://fu51on.deviantart.com/gallery/
 
-**If only we could grab the feed for these folders and use it to dynamically populate our website...**
 
 What is the URL of the feed?
 ----------------------------
@@ -39,9 +41,24 @@ Usage
 **Example**
 ```
 <?php
-    include 'getDeviations.php';
-    $html = getDeviations('http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123361');
-    echo $html;
+    require_once('getDeviations.php');
+    $deviations = getDeviations('http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123361');
+?>
+```
+
+`getDeviations()` returns an array of objects containing all the data from that gallery folder.
+
+You can use a foreach loop to loop through the array and extract the data you require:
+```
+<?php
+    $i = 0;
+
+    foreach($deviations as $deviation): ?>
+        <p><?= $deviations[$i]->title; ?></p>
+        <img src="<?= $deviations[$i]->image; ?>"/>
+<?php
+        $i++;
+    endforeach;
 ?>
 ```
 
