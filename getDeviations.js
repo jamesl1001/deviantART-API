@@ -17,7 +17,7 @@ function getDeviations(url, cacheAge) {
                 object.title         = items[i].title[0];
                 object.link          = items[i].link;
                 object.date          = items[i].pubDate;
-                object.desc          = items[i].description[1];
+                object.desc          = items[i].description[0].content;
                 object.thumbS        = items[i].thumbnail[0].url;
                 object.thumbL        = items[i].thumbnail[1].url;
                 object.image         = items[i].content.url;
@@ -33,15 +33,9 @@ function getDeviations(url, cacheAge) {
             }
 
             // async function is complete, move on
-            processDeviations();
+            processDeviations(deviations);
         }
     })();
 
     return deviations;
-}
-
-var deviations = getDeviations('http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123361', 86400);
-
-function processDeviations() {
-    console.log(deviations);
 }
