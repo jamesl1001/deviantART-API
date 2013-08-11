@@ -6,7 +6,8 @@ DeviantArt users can create Gallery Folders to organise their deviations (e.g. h
 
 This script returns the [data](#what-data-does-the-feed-provide) from all the deviations from the specified folder.
 
-Demo: http://jalproductions.co.uk/projects/DeviantArtCMS/
+- PHP Demo: http://jalproductions.co.uk/projects/DeviantArtCMS/index.php
+- Javascript Demo: http://jalproductions.co.uk/projects/DeviantArtCMS/index2.php
 
 
 
@@ -16,6 +17,8 @@ What is the URL of the feed?
 `http://backend.deviantart.com/rss.xml?q=gallery:[deviant name]/[gallery]`
 
 e.g. http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123391
+
+
 
 What data does the feed provide?
 --------------------------------
@@ -35,8 +38,10 @@ What data does the feed provide?
 - thumbnail (w: 300)
 - deviation
 
-Usage
------
+
+
+Usage - PHP
+-----------
 
 **Example**
 ```
@@ -46,9 +51,9 @@ Usage
 ?>
 ```
 
-`getDeviations()` returns an array of objects containing all the data from that gallery folder.
+`getDeviations()` returns an array of objects containing all the data about each deviation from the provided gallery folder.
 
-You can use a foreach loop to loop through the array and extract the data you require:
+You can use a foreach loop to extract the data you require:
 ```
 <?php
     $i = 0;
@@ -67,8 +72,42 @@ You can use a foreach loop to loop through the array and extract the data you re
 getDeviations($url, $limit, $start);
 ```
 
-`$url`:   DeviantArt feed url `http://backend.deviantart.com/rss.xml?q=gallery:[deviant name]/[gallery]`
+`$url`: DeviantArt feed url `http://backend.deviantart.com/rss.xml?q=gallery:[deviant name]/[gallery]`
 
 `$limit`: Limit the number of deviations returned
 
 `$start`: How many deviations to skip before returning
+
+
+
+Usage - Javascript
+------------------
+
+`processDeviations()` is called once `getDeviations()` is complete which returns an array of objects containing all the data about each deviation from the provided gallery folder.
+
+You can use a for loop to extract the data you require:
+
+**Example**
+```
+<script src="getDeviations.js"></script>
+<script>
+    getDeviations('http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123361', 86400);
+
+    function processDeviations(deviations) {
+        for(var i = 0, l = deviations.length; i < l; i++) {
+            console.log(deviations[i].link);
+            console.log(deviations[i].title);
+            console.log(deviations[i].image);
+        }
+    }
+</script>
+```
+
+**Options**
+```
+getDeviations(url, cacheAge);
+```
+
+`url`: DeviantArt feed url `http://backend.deviantart.com/rss.xml?q=gallery:[deviant name]/[gallery]`
+
+`cacheAge`: Number of seconds to cache the result, default is 1 day
