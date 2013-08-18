@@ -18,7 +18,7 @@
 
     <script src="getDeviations.js"></script>
     <script>
-        getDeviations('http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123361', 86400);
+        getDeviations('http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123361', null, 0, 86400);
 
         function processDeviations(deviations) {
             var allDeviations = document.createElement('div');

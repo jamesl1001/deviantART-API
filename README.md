@@ -74,9 +74,9 @@ getDeviations($url, $limit, $start);
 
 `$url`: DeviantArt feed url `http://backend.deviantart.com/rss.xml?q=gallery:[deviant name]/[gallery]`
 
-`$limit`: Limit the number of deviations returned
+`$limit`: Limit the number of deviations to be displayed
 
-`$start`: How many deviations to skip before returning
+`$start`: How many deviations to skip before displaying the rest
 
 
 
@@ -91,7 +91,7 @@ You can use a for loop to extract the data you require:
 ```
 <script src="getDeviations.js"></script>
 <script>
-    getDeviations('http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123361', 86400);
+    getDeviations('http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123361', null, 0, 86400);
 
     function processDeviations(deviations) {
         for(var i = 0, l = deviations.length; i < l; i++) {
@@ -105,9 +105,13 @@ You can use a for loop to extract the data you require:
 
 **Options**
 ```
-getDeviations(url, cacheAge);
+getDeviations(url, limit, start, cacheAge);
 ```
 
 `url`: DeviantArt feed url `http://backend.deviantart.com/rss.xml?q=gallery:[deviant name]/[gallery]`
+
+`limit`: Limit the number of deviations to be displayed, default is `null`
+
+`start`: How many deviations to skip before displaying the rest, default is 0
 
 `cacheAge`: Number of seconds to cache the result, default is 1 day

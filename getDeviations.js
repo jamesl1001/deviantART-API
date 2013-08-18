@@ -1,5 +1,7 @@
-function getDeviations(url, cacheAge) {
+function getDeviations(url, limit, start, cacheAge) {
     var deviations = [];
+    var limit      = limit || null;
+    var start      = start || 0;
     var cacheAge   = cacheAge || 86400;
 
     (function queryYQL() {
@@ -13,6 +15,9 @@ function getDeviations(url, cacheAge) {
             var items = feed.query.results.rss.channel.item;
 
             for(var i = 0, l = items.length; i < l; i++) {
+                if(i < start) { continue; }
+                if(!!limit && i == start + limit) break;
+
                 var object = {};
 
                 object.title         = items[i].title[0];
