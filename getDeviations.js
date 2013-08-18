@@ -1,5 +1,6 @@
 function getDeviations(url, cacheAge) {
     var deviations = [];
+    var cacheAge   = cacheAge || 86400;
 
     (function queryYQL() {
         // thanks http://stackoverflow.com/a/7369516/1696757
