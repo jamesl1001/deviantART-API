@@ -2,14 +2,14 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="How to utilise DeviantArt's feeds as a CMS"/>
+    <meta name="description" content="Use DeviantArt's RSS/XML feeds as a CMS to dynamically embed deviation galleries on your website"/>
     <meta name="author" content="James Alexander Lee"/>
-    <title>DeviantArtCMS</title>
+    <title>deviantART-API</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 <body>
-    <h1>DeviantArtCMS</h1>
-    <p><a href="https://github.com/jamesl1001/Deviant-Art-CMS" target="_blank">https://github.com/jamesl1001/Deviant-Art-CMS</a></p>
+    <h1>deviantART-API</h1>
+    <p><a href="https://github.com/jamesl1001/deviantART-API" target="_blank">https://github.com/jamesl1001/deviantART-API</a></p>
     <h2><a href="index">PHP</a> | JavaScript</h2>
     <p>Use DeviantArt's RSS/XML feeds as a CMS to dynamically embed deviation galleries on your website.</p>
     <p>Feed: <a href="http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123361" target="_blank">http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123361</a></p>
