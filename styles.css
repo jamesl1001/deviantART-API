@@ -25,12 +25,13 @@ hr {
 
 .deviation {
   width: 100%;
+  max-width: 800px;
   background: #EEE;
   border-radius: 5px;
   box-shadow: 1px 1px 3px #CCC;
-  float: left;
   margin-bottom: 40px;
   padding: 20px;
+  overflow: hidden;
 }
 
 .col {
