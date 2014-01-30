@@ -10,7 +10,7 @@
 <body>
     <h1>deviantART-API</h1>
     <p><a href="https://github.com/jamesl1001/deviantART-API" target="_blank">https://github.com/jamesl1001/deviantART-API</a></p>
-    <h2>PHP | <a href="index2">JavaScript</a></h2>
+    <h2>PHP | <a href="javascript">JavaScript</a></h2>
     <p>Use DeviantArt's RSS/XML feeds as a CMS to dynamically embed deviation galleries on your website.</p>
     <p>Feed: <a href="http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123361" target="_blank">http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123361</a></p>
 
