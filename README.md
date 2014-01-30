@@ -1,4 +1,4 @@
-Deviant-Art-CMS
+deviantART-API
 ===============
 Use DeviantArt's RSS/XML feeds as a CMS to dynamically embed deviation galleries on your website.
 
