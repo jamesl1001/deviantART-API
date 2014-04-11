@@ -6,8 +6,8 @@ DeviantArt users can create Gallery Folders to organise their deviations (e.g. h
 
 This script returns the [data](#what-data-does-the-feed-provide) from all the deviations from the specified folder.
 
-- PHP Demo: http://jalproductions.co.uk/projects/DeviantArtCMS/index.php
-- Javascript Demo: http://jalproductions.co.uk/projects/DeviantArtCMS/index2.php
+- PHP Demo: http://jalproductions.co.uk/projects/DeviantArtCMS/php.php
+- Javascript Demo: http://jalproductions.co.uk/projects/DeviantArtCMS/javascript.php
 
 
 
