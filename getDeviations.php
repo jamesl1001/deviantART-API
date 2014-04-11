@@ -1,6 +1,13 @@
 <?php
 function getDeviations($url, $limit = null, $start = 0) {
-    $feed      = simplexml_load_file($url);
+    $curl = curl_init();
+
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_USERAGENT, 'JaL-User-Agent');
+    curl_setopt($curl, CURLOPT_ENCODING, 'gzip,deflate');
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+    $feed      = simplexml_load_string(curl_exec($curl));
     $channel   = $feed->channel;
     $i         = 0;
     $deviations = array();
