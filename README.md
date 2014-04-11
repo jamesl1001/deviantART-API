@@ -47,7 +47,7 @@ Usage - PHP
 ```
 <?php
     require_once('getDeviations.php');
-    $deviations = getDeviations('http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123361');
+    $deviations = getDeviations('http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123391');
 ?>
 ```
 
@@ -91,7 +91,7 @@ You can use a for loop to extract the data you require:
 ```
 <script src="getDeviations.js"></script>
 <script>
-    getDeviations('http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123361', null, 0, 86400);
+    getDeviations('http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123391', null, 0, 86400);
 
     function processDeviations(deviations) {
         for(var i = 0, l = deviations.length; i < l; i++) {
