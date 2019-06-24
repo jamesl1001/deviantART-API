@@ -12,13 +12,13 @@
     <p><a href="https://github.com/jamesl1001/deviantART-API" target="_blank">https://github.com/jamesl1001/deviantART-API</a></p>
     <h2><a href="php">PHP</a> | JavaScript</h2>
     <p>Use DeviantArt's RSS/XML feeds as a CMS to dynamically embed deviation galleries on your website.</p>
-    <p>Feed: <a href="http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123391" target="_blank">http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123391</a></p>
+    <p>Feed: <a href="https://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123391" target="_blank">https://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123391</a></p>
 
     <hr>
 
     <script src="getDeviations.js"></script>
     <script>
-        getDeviations('http://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123391', null, 0, 86400);
+        getDeviations('https://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123391', null, 0);
 
         function processDeviations(deviations) {
             var allDeviations = document.createElement('div');
