@@ -6,9 +6,6 @@ DeviantArt users can create Gallery Folders to organise their deviations (e.g. h
 
 This script returns the [data](#what-data-does-the-feed-provide) from all the deviations from the specified folder.
 
-- PHP Demo: https://jalproductions.co.uk/projects/deviantArt-API/php.php
-- Javascript Demo: https://jalproductions.co.uk/projects/deviantArt-API/javascript.php
-
 
 
 What is the URL of the feed?
