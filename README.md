@@ -27,6 +27,7 @@ Here is an expanded list of query parameters:
 | `offset=[number]` | `offset=60` |
 | `order=[number]` | `order=5` | Order by newest |
 | `order=[number]` | `order=9` | Order by all-time popularity |
+| `limit=[number]` | `limit=10` | 1-60 |
 
 
 What data does the feed provide?
