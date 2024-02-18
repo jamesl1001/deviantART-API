@@ -8,13 +8,25 @@ This script returns the [data](#what-data-does-the-feed-provide) from all the de
 
 
 
-What is the URL of the feed?
+What is the URL of the feed and its parameters?
 ----------------------------
 
-`https://backend.deviantart.com/rss.xml?q=gallery:[deviant name]/[gallery]`
+The RSS URL always begins with: `https://backend.deviantart.com/rss.xml` followed by some query parameters, e.g. https://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123391
 
-e.g. https://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123391
+[DeviantArt's RSS documentation](https://www.deviantart.com/developers/rss) only provides a couple of examples of how to construct RSS URLs.
 
+Here is an expanded list of query parameters:
+
+| Query params | Example | Description |
+| :- | :- | :- |
+| `q=by:[deviant name]` | `q=by:fu51on` |
+| `q=gallery:[deviant name]` | `q=gallery:fu51on` |
+| `q=gallery:[deviant name]/[gallery]` | `q=gallery:fu51on/27123391` |
+| `q=[search term]` | `q=frogs` |
+| `q=in:[category]` | `q=in:visual_art` |
+| `offset=[number]` | `offset=60` |
+| `order=[number]` | `order=5` | Order by newest |
+| `order=[number]` | `order=9` | Order by all-time popularity |
 
 
 What data does the feed provide?
