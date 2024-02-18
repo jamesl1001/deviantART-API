@@ -1,15 +1,12 @@
-deviantART-API
-===============
+# deviantART-API
+
 Use DeviantArt's RSS/XML feeds as a CMS to dynamically embed deviation galleries on your website.
 
 DeviantArt users can create Gallery Folders to organise their deviations (e.g. http://fu51on.deviantart.com/gallery/)
 
 This script returns the [data](#what-data-does-the-feed-provide) from all the deviations from the specified folder.
 
-
-
-What is the URL of the feed and its parameters?
-----------------------------
+## What is the URL of the feed and its parameters?
 
 The RSS URL always begins with: `https://backend.deviantart.com/rss.xml` followed by some query parameters, e.g. https://backend.deviantart.com/rss.xml?q=gallery:fu51on/27123391
 
@@ -29,9 +26,11 @@ Here is an expanded list of query parameters:
 | `order=[number]` | `order=9` | Order by all-time popularity |
 | `limit=[number]` | `limit=10` | 1-60 |
 
+## How can I get the Featured and Scraps galleries?
 
-What data does the feed provide?
---------------------------------
+Please see https://github.com/jamesl1001/deviantART-API/issues/4#issuecomment-1951384692
+
+## What data does the feed provide?
 
 - title
 - link
@@ -48,10 +47,7 @@ What data does the feed provide?
 - thumbnail (w: 300)
 - deviation
 
-
-
-Usage - PHP
------------
+## Usage - PHP
 
 **Example**
 ```
@@ -88,10 +84,7 @@ getDeviations($url, $limit, $start);
 
 `$start`: How many deviations to skip before displaying the rest
 
-
-
-Usage - Javascript
-------------------
+## Usage - Javascript
 
 `processDeviations()` is called once `getDeviations()` is complete which returns an array of objects containing all the data about each deviation from the provided gallery folder.
 
