@@ -22,9 +22,9 @@ function getDeviations(url, limit, start) {
             object.link          = items[i].link;
             object.date          = items[i].pubDate;
             object.desc          = items[i]['media:description']['#text'];
-            object.thumbS        = items[i]['media:thumbnail'][0]['@url'];
-            object.thumbL        = items[i]['media:thumbnail'][1]['@url'];
-            object.image         = items[i]['media:content']['@url'];
+            object.thumbS        = items[i]['media:thumbnail']?.[0]['@url'] || null;
+            object.thumbL        = items[i]['media:thumbnail']?.[1]['@url'] || null;
+            object.image         = items[i]['media:content']?.['@url'] || null;
             object.rating        = items[i]['media:rating'];
             object.category      = items[i]['media:category']['#text'];
             object.categoryUrl   = 'https://www.deviantart.com/' + object.category;
